@@ -1,0 +1,5 @@
+version: 2
+sources:
+  - name: dbt_raw_layer
+    tables:
+      - name: customer_ext
