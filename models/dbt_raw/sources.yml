@@ -3,3 +3,10 @@ sources:
   - name: dbt_raw_layer
     tables:
       - name: customer_ext
+      #- name: orders_ext
+      - name: invoice_ext
+      - name: orders_ext
+      - name: product_ext
+  - name: reference 
+    tables:
+      - name: audit_log    

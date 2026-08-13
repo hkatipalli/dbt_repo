@@ -7,6 +7,9 @@ email,
 phone,
 city,
 state,
-country,
-created_at
-from {{ source('dbt_raw_layer','customer_ext') }}
+a.country,
+created_at,
+number_of_people
+from {{ source('dbt_raw_layer','customer_ext') }} a
+left join  {{ ref('customer_ephemeral') }} b
+on a.country= b.country

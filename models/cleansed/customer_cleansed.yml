@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: customer_cleansed
+    description: "This is a customer table"
+    columns:
+      - name: customer_id
+        description: "This is a unique customer id"
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: "This is a email of customer"
+        tests:
+          #- unique
+          - not_null
